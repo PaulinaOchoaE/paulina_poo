@@ -1,76 +1,47 @@
 package edu.Paulina.RETO3.process;
 import java.util.Scanner;
 public class Conversiones {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        char continuar;
+    private static Scanner scanner = new Scanner(System.in);
 
-        do {
-            System.out.println("** Programa de Conversiones **");
-            mostrarMenu();
+    public static void convertirDecimalABinario() {
+        System.out.println("Ingrese un número decimal:");
+        int decimal = scanner.nextInt();
+        scanner.nextLine();
 
-            System.out.print("Tipo de conversión (a/b/c/d/e/f): ");
-            char opcion = scanner.next().charAt(0);
-
-            if (opcion == 'a' || opcion == 'b' || opcion == 'c' || opcion == 'd' || opcion == 'e' || opcion == 'f') {
-                System.out.print("Número a convertir: ");
-                int numero = scanner.nextInt();
-
-                String resultado = realizarConversion(numero, opcion);
-                System.out.println("Respuesta: El número " + numero + " en base a " + opcion + " es: " + resultado);
-            } else {
-                System.out.println("Opción no válida");
-            }
-
-            System.out.print("¿Desea realizar otra conversión (s/n)? ");
-            continuar = scanner.next().charAt(0);
-
-        } while (continuar == 's' || continuar == 'S');
-
-        System.out.println("¡Programa de Conversiones finalizado!");
+        String binario = Integer.toBinaryString(decimal);
+        System.out.println("El número binario es: " + binario);
     }
 
-    public static void mostrarMenu() {
-        System.out.println("a. Convertir de Decimal a Binario");
-        System.out.println("b. Convertir de Decimal a Octal");
-        System.out.println("c. Convertir de Decimal a Hexadecimal");
-        System.out.println("d. Convertir de Binario a Decimal");
-        System.out.println("e. Convertir de Octal a Decimal");
-        System.out.println("f. Convertir de Hexadecimal a Decimal");
+    public static void convertirDecimalAOctal() {
+        System.out.println("Ingrese un número decimal:");
+        int decimal = scanner.nextInt();
+        scanner.nextLine();
+
+        String octal = Integer.toOctalString(decimal);
+        System.out.println("El número octal es: " + octal);
     }
 
-    public static String realizarConversion(int numero, char opcion) {
-        String resultado = "";
+    public static void convertirBinarioADecimal() {
+        System.out.println("Ingrese un número binario:");
+        String binario = scanner.nextLine();
 
-        if (opcion >= 'a' && opcion <= 'c') {
-            resultado = convertirDecimal(numero, opcion);
-        } else if (opcion >= 'd' && opcion <= 'e') {
-            resultado = convertirSistema(numero, opcion);
-        } else if (opcion == 'f') {
-            resultado = convertirSistema(numero, opcion);
-        }
-        return resultado;
+        int decimal = Integer.parseInt(binario, 2);
+        System.out.println("El número decimal es: " + decimal);
     }
 
-    public static String convertirDecimal(int numero, char opcion) {
-        if (opcion == 'a') {
-            return Integer.toBinaryString(numero);
-        } else if (opcion == 'b') {
-            return Integer.toOctalString(numero);
-        } else if (opcion == 'c') {
-            return Integer.toHexString(numero);
-        }
-        return "";
+    public static void convertirOctalADecimal() {
+        System.out.println("Ingrese un número octal:");
+        String octal = scanner.nextLine();
+
+        int decimal = Integer.parseInt(octal, 8);
+        System.out.println("El número decimal es: " + decimal);
     }
 
-    public static String convertirSistema(int numero, char opcion) {
-        if (opcion == 'd') {
-            return Integer.toString(numero, 2);
-        } else if (opcion == 'e') {
-            return Integer.toString(numero, 8);
-        } else if (opcion == 'f') {
-            return Integer.toString(numero, 16);
-        }
-        return "";
+    public static void convertirHexadecimalADecimal() {
+        System.out.println("Ingrese un número hexadecimal:");
+        String hexadecimal = scanner.nextLine();
+
+        int decimal = Integer.parseInt(hexadecimal, 16);
+        System.out.println("El número decimal es: " + decimal);
     }
 }
