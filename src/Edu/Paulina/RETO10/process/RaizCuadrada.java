@@ -9,7 +9,7 @@ public abstract class RaizCuadrada {
 
     class RaizCuadradaEntero extends RaizCuadrada {
         @Override
-        double calcularRaizCuadrada(double numero) {
+        public double calcularRaizCuadrada(double numero) {
             return Math.sqrt((double) numero);
         }
     }
@@ -17,7 +17,7 @@ public abstract class RaizCuadrada {
     // Clase derivada para números de punto flotante
     class RaizCuadradaDouble extends RaizCuadrada {
         @Override
-        double calcularRaizCuadrada(double numero) {
+        public double calcularRaizCuadrada(double numero) {
             return Math.sqrt(numero);
         }
 }   }
