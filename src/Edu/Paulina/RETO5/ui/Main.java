@@ -1,7 +1,7 @@
 package edu.Paulina.RETO5.ui;
 
-public class main {
-    public static void main(String[] args) {
+public class Main {
+    public Main(String[] args) {
         edu.Paulina.RETO5.ui.CLI.showMenu();
 
     }
