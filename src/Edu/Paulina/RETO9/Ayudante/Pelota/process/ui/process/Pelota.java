@@ -3,9 +3,9 @@ package edu.Paulina.RETO9.Ayudante.Pelota.process.ui.process;
 public class Pelota {
     private String tipo;
     private String color;
-    private double tamaño;
+    private double tamano;
 
-    public Pelota(int tipo, int color, double tamaño) {
+    public Pelota(int tipo, int color, double tamano) {
         // Convertir opciones a valores específicos
         switch (tipo) {
             case 1:
@@ -37,7 +37,7 @@ public class Pelota {
                 break;
         }
 
-        this.tamaño = tamaño;
+        this.tamano = tamano;
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Pelota {
         return "Pelota{" +
                 "tipo='" + tipo + '\'' +
                 ", color='" + color + '\'' +
-                ", tamaño=" + tamaño +
+                ", tamano=" + tamano +
                 '}';
     }
 }

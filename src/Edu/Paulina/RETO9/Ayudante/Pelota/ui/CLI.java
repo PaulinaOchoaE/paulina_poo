@@ -26,10 +26,10 @@ public class CLI {
 
         // Pedir el tamaño de la pelota
         System.out.println("Ingresa el tamaño de la pelota (en centímetros):");
-        double tamaño = scanner.nextDouble();
+        double tamano = scanner.nextDouble();
 
         // Crear la pelota
-        Pelota pelota = new Pelota(tipo, color, tamaño);
+        Pelota pelota = new Pelota(tipo, color, tamano);
 
         // Mostrar información de la pelota
         System.out.println("¡Pelota creada!");
