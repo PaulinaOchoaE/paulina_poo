@@ -1,13 +1,13 @@
 package edu.Paulina.RETO4.process;
 
 public class calculo {
-    public static void trimestreVendeMasPorSabor(int[]trimestre1,int[]trimestre2,int[]trimestre3,int[]trimestre4,String[]sabores,int tamañoCajas) {
+    public static void trimestreVendeMasPorSabor(int[]trimestre1,int[]trimestre2,int[]trimestre3,int[]trimestre4,String[]sabores,int tamanoCajas) {
         String[] trimestres;
         int[] Ventas;
-        trimestres = new String[tamañoCajas];
-        Ventas= new int[tamañoCajas];
+        trimestres = new String[tamanoCajas];
+        Ventas= new int[tamanoCajas];
         int numeroMayor;
-        for(int i = 0; i<tamañoCajas;i++){
+        for(int i = 0; i<tamanoCajas;i++){
             numeroMayor = trimestre1[i];
             if(numeroMayor == trimestre1[i]){
                 trimestres[i]="Trimestre1";
@@ -31,7 +31,7 @@ public class calculo {
             Ventas[i]=numeroMayor;
 
         }
-        for(int h = 0; h<tamañoCajas;h++){
+        for(int h = 0; h<tamanoCajas;h++){
             System.out.print("Trimestre mas alto de:"+sabores[h] + "Trimestre:" +trimestres[h]+"Valor:"+Ventas[h]+"\n");
 
         }
@@ -39,14 +39,14 @@ public class calculo {
 
     }
 
-    public static void trimestreVendeMasPorAnno(int[]trimestre1,int[]trimestre2,int[]trimestre3,int[]trimestre4,int tamañoCajas){
+    public static void trimestreVendeMasPorAnno(int[]trimestre1,int[]trimestre2,int[]trimestre3,int[]trimestre4,int tamanoCajas){
        int totaltrimestre1=0;
        int totaltrimestre2=0;
        int totaltrimestre3=0;
        int totaltrimestre4=0;
 
 
-        for (int i=0; i<tamañoCajas;i++){
+        for (int i=0; i<tamanoCajas;i++){
             totaltrimestre1 += trimestre1[i];
             totaltrimestre2 +=trimestre2[i];
             totaltrimestre3 +=trimestre3[i];
